@@ -1,0 +1,65 @@
+#fundo {
+    background-image: url(assets/images/Psicologia-das-cores.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+#btnSalvar{
+    margin-bottom: 20px;
+}
+
+#btnImprimir{
+    margin-bottom: 20px;
+}
+
+.btn-editar {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+
+.text-center {
+    text-align: center;
+  }
+
+  .imput-group input {
+    text-align: center;
+  }
+
+  .imput-group > label {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  #formAge + textarea {
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .highlight {
+    background-color: rgb(170, 220, 213);
+    font-weight: bold;
+  }
+
+  .custom-message {
+    background-color: #97afcf;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 16px;
+    text-align: center;
+    transform: rotate(3deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  
