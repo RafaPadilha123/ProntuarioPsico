@@ -41,6 +41,6 @@ function exibirMensagem(mensagem, tipo) {
   container.innerHTML = '';
   container.appendChild(mensagemContainer);
   setTimeout(() => {
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   }, 3000);
 }
