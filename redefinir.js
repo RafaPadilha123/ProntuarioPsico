@@ -1,5 +1,6 @@
 use restrict;
-function enviarSolicitacao() {
+
+function enviarSolicitacao(exibirSucesso) {
   const formulario = document.forms[0];
 
   const nomeInput = formulario.elements.nome;
@@ -23,8 +24,7 @@ function enviarSolicitacao() {
   if (emailRegex.test(email)) {
     const num1 = 3;
     const num2 = 4;
-    const operacao = somar;
-    const resultado = operacao(num1, num2);
+    const resultado = somar(num1, num2);
 
     if (resultado === respostaUsuario) {
       exibirMensagem('Solicitação enviada ao administrador!', 'alert-success');
@@ -32,6 +32,7 @@ function enviarSolicitacao() {
         window.location.href = 'index.html';
       }, 3000);
       formulario.reset();
+      exibirSucesso();
     } else {
       exibirMensagem('Resposta incorreta! Por favor, tente novamente.', 'alert-danger');
     }
@@ -40,13 +41,19 @@ function enviarSolicitacao() {
   }
 }
 
-function somar(a, b) {
-  return a + b;
+function exibirSucesso() {
+  console.log('Solicitação enviada com sucesso!');
 }
 
 window.onload = function () {
-  document.getElementById('enviar').addEventListener('click', enviarSolicitacao);
+  document.getElementById('enviar').addEventListener('click', () => {
+    enviarSolicitacao(exibirSucesso);
+  });
 };
+
+function somar(a, b) {
+  return a + b;
+}
 
 function exibirMensagem(mensagem, tipo) {
   const mensagemContainer = document.createElement('div');
@@ -60,4 +67,3 @@ function exibirMensagem(mensagem, tipo) {
     container.innerHTML = '';
   }, 3000);
 }
-
